@@ -1,0 +1,32 @@
+constant:
+  swagger-const:
+    title: Odsay
+    description: Server To Server Communication
+    version: v0.1
+  odsay-api-const:
+    base-url: https://api.odsay.com/v1/api
+    param-api-key-name: apiKey
+    param-api-key-value:
+    param-start-lat-name: SY
+    param-start-lng-name: SX
+    param-end-lat-name: EY
+    param-end-lng-name: EX
+
+spring:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false #OPEN API에서 받은 JSON/XML에서 받고 싶지 않은 프로퍼티는 클래스를 만들 때 생략할 수 있게 해줌.
+                                        #이 세팅을 안 하면 모든 프로퍼티를 클래스에 적어야 함
+
+springdoc:
+  swagger-ui:
+    default-model-expand-depth: 10
+    display-request-duration: true
+    groups-order: asc
+    operations-sorter: method
+    path: /swagger
+    tags-sorter: alpha
+  cache:
+    disabled: true
+
+
