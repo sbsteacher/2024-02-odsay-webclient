@@ -20,6 +20,6 @@ public class OdsayController {
     @GetMapping("pub-trans-path")
     public String searchPubTransPath(@ParameterObject @ModelAttribute PubTransPathGetReq req) {
         log.info("searchPubTransPath-req: {}", req);
-        return null;
+        return odsayService.searchPubTransPath(req);
     }
 }

@@ -11,6 +11,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ToString
 public class OdsayApiConst {
     private final String baseUrl;
+    private final String searchPubTransPathUrl;
     private final String paramApiKeyName;
     private final String paramApiKeyValue;
     private final String paramStartLatName;

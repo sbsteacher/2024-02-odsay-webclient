@@ -10,11 +10,11 @@ import lombok.ToString;
 @ToString
 public class PubTransPathGetReq {
     @Schema(example = "37.6134436427887")
-    private final double startLat;
+    private final String startLat;
     @Schema(example = "126.926493082645")
-    private final double startLng;
+    private final String startLng;
     @Schema(example = "37.5004198786564")
-    private final double endLat;
+    private final String endLat;
     @Schema(example = "127.126936754911")
-    private final double endLng;
+    private final String endLng;
 }
