@@ -1,4 +1,4 @@
-package com.green.odsay;
+package com.green.odsay.base;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -33,11 +33,12 @@ public class OdsayService {
         formData.add(odsayApiConst.getParamEndLatName(), req.getEndLat());
         formData.add(odsayApiConst.getParamEndLngName(), req.getEndLng());
 
-        String json = webClient.post().uri(odsayApiConst.getSearchPubTransPathUrl())
-                .body(BodyInserters.fromFormData(formData))
-                .retrieve() //통신 시도
-                .bodyToMono(String.class)//결과물을 String변환
-                .block(); //비동기 > 동기
+        String json = webClient.post()
+                               .uri(odsayApiConst.getSearchPubTransPathUrl())
+                               .body(BodyInserters.fromFormData(formData))
+                               .retrieve() //통신 시도
+                               .bodyToMono(String.class)//결과물을 String변환
+                               .block(); //비동기 > 동기
 
         try {
             JsonNode jsonNode = objectMapper.readTree(json);

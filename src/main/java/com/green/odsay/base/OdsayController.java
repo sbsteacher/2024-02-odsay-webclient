@@ -1,8 +1,7 @@
-package com.green.odsay;
+package com.green.odsay.base;
 
 import com.green.odsay.model.PubTransPathGetReq;
 import com.green.odsay.model.PubTransPathVo;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
